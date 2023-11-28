@@ -1,0 +1,91 @@
+
+.featuredCard {
+}
+
+
+
+.projectTitle {
+  color: #344053;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.projectRate {
+  background-color: transparent;
+  border-radius: 100px;
+  border: 1px solid #0da100;
+  color: #1ca710;
+  font-weight: 600;
+  font-size: 0.875rem;
+  width: 100%;
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.companyName {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.matchPercent {
+  background-color: transparent;
+  text-align: start;
+  border-radius: 100px;
+  border: 1.5px solid #4c394f;
+  color: #4c394f;
+  font-weight: 600;
+  font-size: 0.75rem;
+  width: fit-content;
+  padding: 5px 8px;
+}
+
+.viewDetails {
+  height: 40px;
+  border-radius: 8px;
+  background: #000;
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.tag {
+  display: flex;
+padding: 2px 8px;
+justify-content: center;
+align-items: center;
+border-radius: 16px;
+background: #ECECEC;
+}
+
+.title {
+  color: #000;
+  font-size: 16px;
+font-style: normal;
+font-weight: 500;
+}
+
+.button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+border: 1.5px solid #D7D7D7;
+display: flex;
+justify-content: center;
+align-items: center;
+svg {
+  margin: 0
+}
+}
+
+.skillsTag {
+    padding: 5px 8px;
+}
+
+.card {
+  width: max-content;
+  font-family: Inter;
+  border-radius: 24px;
+  padding: 24px;
+  border: 1px solid #CFCFCF;
+}

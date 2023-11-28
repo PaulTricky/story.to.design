@@ -1,0 +1,62 @@
+.title {
+    color: #FFF;
+
+    font-family: Poppins;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.description {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.button {
+    height: 60px;
+    font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+}
+
+.bannerAvatar {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.search {
+    padding: 10px 24px;
+    position: absolute;
+    bottom: 0;
+    transform: translate(0, 50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    background: white;
+    width: 1160px;
+    border-radius: 100px;
+border: 1px solid #CFD4DC;
+color: #667084;
+
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.enter {
+    background: black;
+    width: 54px;
+height: 54px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
