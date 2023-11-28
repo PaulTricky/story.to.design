@@ -1,0 +1,57 @@
+.login {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form {
+  text-align: left;
+}
+
+.btnWapper {
+  :global {
+    .ant-space-item {
+      width: 100%;
+    }
+  }
+}
+
+.text {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.input {
+  width: 100%;
+}
+
+.inputPassword {
+  width: 100%;
+  padding: 0px !important;
+
+  :global {
+    #basic_password {
+      padding: 8px 11px;
+      border-radius: 12px;
+    }
+
+    .ant-input-suffix {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.logo {
+  background-color: var(--gray-654-color);
+  display: flex;
+  align-items: center;
+}
