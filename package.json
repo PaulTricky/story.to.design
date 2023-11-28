@@ -6,11 +6,34 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_3edb05eb0dbc442"
   },
   "dependencies": {
+    "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.3"
-  }
+    "react-dom": "^18"
+  },
+  "resolutions": {
+    "string-width": "^4",
+    "jackspeak": "^2",
+    "strip-ansi": "^6"
+  },
+  "devDependencies": {
+    "@storybook/addon-designs": "^7.0.5",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-interactions": "^7.5.3",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/nextjs": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/testing-library": "^0.2.2",
+    "storybook": "^7.5.3",
+    "storybook-addon-designs": "^6.3.1"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "storybook-figma@0.1.0"
 }
