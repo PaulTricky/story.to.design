@@ -8,7 +8,7 @@ import { Space } from 'antd/lib';
 
 export default function Home() {
   return (
-    <Space direction='vertical' size={16} style={{background: 'white', width: '100vw', height:'100vh', overflow: 'auto', padding: '0 24px 24px 24px'}}>
+    <Space direction='vertical' size={16} style={{background: 'white', width: '100vw', height:'100vh', overflow: 'auto',}}>
 <NavbarComponent />
 <BannerComponent />
     <ProjectCard /> 

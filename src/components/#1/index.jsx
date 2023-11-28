@@ -84,6 +84,7 @@ const NavbarComponent = () => {
         justifyContent: "space-between",
         alignItems: "center",
         color: "black",
+        borderBottom: '1px solid #EAECF0'
       }}
     >
       <Space>
