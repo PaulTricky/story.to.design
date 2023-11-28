@@ -7,6 +7,7 @@ import ProjectCard from "@/components/#3";
 import { Space } from "antd/lib";
 import JobCard from "@/components/#4";
 import QuoteSection from "@/components/#5";
+import FooterComponent from "@/components/#6";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <ProjectCard />
       <JobCard />
       <QuoteSection />
+      <FooterComponent />
     </Space>
   );
 }

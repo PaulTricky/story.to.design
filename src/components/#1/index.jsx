@@ -23,7 +23,7 @@ const Logo = () => {
           color: "black",
         }}
       >
-        Black Bird
+        BlackBird
       </span>
     </Space>
   );
