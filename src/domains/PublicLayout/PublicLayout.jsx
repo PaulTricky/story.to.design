@@ -66,6 +66,16 @@ const PublicLayout = ({ children, slideShow = true, hideLogo = false }) => {
                   author={'Joe Client'}
                   email={'@joe'}
                 />
+                <CarouselContent
+                  content={`I've now got access to the best security professionals whenever I need them.`}
+                  author={'Joe Client'}
+                  email={'@joe'}
+                />
+                <CarouselContent
+                  content={`I've now got access to the best security professionals whenever I need them.`}
+                  author={'Joe Client'}
+                  email={'@joe'}
+                />
               </Carousel>
             </div>
           </div>
