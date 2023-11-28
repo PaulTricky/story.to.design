@@ -54,7 +54,7 @@ const LoginPage = () => {
               color='var(--gray-600-color)'
               className={classnames(styles.text, 'medium')}
             >
-              New to Zalow?{' '}
+              New to BlackBird?{' '}
               <Link
                 prefetch={false}
                 href={''}
