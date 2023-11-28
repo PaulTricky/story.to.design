@@ -1,4 +1,5 @@
-import '@/styles/globals.scss';
+import '../styles/globals.scss';
+import '../styles/styles.scss';
 import { ConfigProvider } from 'antd';
 import { theme } from '../../theme.config';
 

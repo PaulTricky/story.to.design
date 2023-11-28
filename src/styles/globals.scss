@@ -1,4 +1,8 @@
-@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
   * {
     scrollbar-width: thin;
     scrollbar-color: $foreground-color inherit;
@@ -138,7 +142,7 @@ button {
 }
 
 .w-full {
-  width: 100%;
+  width: 100% !important;
 }
 
 .h-full {
@@ -455,7 +459,6 @@ button {
   }
 }
 
-
 .appIntercom {
   height: 60px;
   width: 60px;
@@ -568,20 +571,20 @@ button {
 }
 
 .gap-16 {
-  gap: 16px
+  gap: 16px;
 }
 
 .gap-24 {
-  gap: 24px
+  gap: 24px;
 }
 
 .gap-32 {
-  gap: 32px
+  gap: 32px;
 }
 
 .link {
   text-decoration: underline;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .ant-card-body {

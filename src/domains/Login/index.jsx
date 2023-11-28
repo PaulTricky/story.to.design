@@ -13,7 +13,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import styles from './Login.module.scss';
-import { Button } from 'antd';
+import Button from '@/components/Button/Button';
 
 const LoginPage = () => {
   return (
@@ -48,7 +48,7 @@ const LoginPage = () => {
               level={2}
               className='m-0'
             >
-              Create your BlackBird Account
+              Welcome to BlackBird
             </Typography.Title>
             <Typography
               color='var(--gray-600-color)'
@@ -92,7 +92,7 @@ const LoginPage = () => {
             <Space direction='vertical' size={6} className='w-full'>
               <Typography color='var(--grey-700-color)'>Password*</Typography>
               <Form.Item name='password' rules={[{ required: true }]}>
-                <Input
+                <Input.Password
                   type='password'
                   className={styles.inputPassword}
                   placeholder='Enter a password'
