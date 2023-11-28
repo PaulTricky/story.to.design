@@ -6,7 +6,7 @@ import Script from 'next/script';
 
 export default function App({ Component, pageProps }) {
   return (
-    <ConfigProvider  >
+    <ConfigProvider theme={theme}>
       <Component {...pageProps} />
     </ConfigProvider>
   );
