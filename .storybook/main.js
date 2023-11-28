@@ -14,6 +14,7 @@ const config = {
     name: '@storybook/nextjs',
     options: {},
   },
+  staticDirs: ['../public'],
   docs: {
     autodocs: 'tag',
   },
@@ -21,6 +22,7 @@ const config = {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@/components': path.resolve(__dirname, '../src/components'),
+      '/assets': path.resolve(__dirname, '../public/assets'),
     };
 
     return config;
