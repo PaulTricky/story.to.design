@@ -13,7 +13,7 @@ export const Primary = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/file/uTzX6DKq4o18JpcFHFd6eu/Untitled?type=design&node-id=3-3&mode=design&t=UEpMD5KfXit4Tin5-4',
+      url: 'https://www.figma.com/file/uTzX6DKq4o18JpcFHFd6eu/Untitled?type=design&node-id=22-425&mode=design&t=njiPkQBATKyUG6v4-4',
     },
   },
 };

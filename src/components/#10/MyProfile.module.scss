@@ -22,7 +22,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-
 }
 
 .review {
@@ -66,6 +65,9 @@
 
 .profile {
   position: relative;
+  min-width: 700px;
+  width: 700px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   color: var(--black-600-color);
@@ -100,23 +102,23 @@
       right: 15px;
       bottom: 15px;
 
-    svg {
-    width: 30px;
-    height: 30px;
-    }
+      svg {
+        width: 30px;
+        height: 30px;
+      }
     }
 
     .edit {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
+      position: absolute;
+      right: 40px;
+      bottom: 40px;
 
-    width: 15px;
-    height: 15px;
+      width: 15px;
+      height: 15px;
 
-    button {
-    border-radius: 100px;
-    }
+      button {
+        border-radius: 100px;
+      }
     }
   }
 
@@ -308,11 +310,8 @@
   }
 }
 
-
-
-
 .cardVideoIntro {
-  font-size: 1.2rem;      
+  font-size: 1.2rem;
 
   span {
     font-family: 'Helvetica Neue';
@@ -345,7 +344,6 @@
 }
 
 .horizontalBlock {
-
   .horizontalItem {
     border-left: 1px solid #e0d5d5;
     display: flex;
@@ -367,16 +365,11 @@
   .resumeRow {
     border-bottom: 1px solid #e0d5d5;
   }
-  
+
   .resumeRow:last-child {
     border-bottom: none;
-  
   }
 }
-
-
-
-
 
 .rating {
   display: flex;
@@ -545,25 +538,25 @@
 .resumeTitle {
   font-size: 20px;
   font-weight: 500;
-  color: var(--black-900-color)
+  color: var(--black-900-color);
 }
 
 .resumeTitleMobile {
   font-size: 16px;
   font-weight: 500;
-  color: var(--black-900-color)
+  color: var(--black-900-color);
 }
 
 .resumeLabel {
   font-size: 16px;
   font-weight: 600;
-  color: var(--black-900-color)
+  color: var(--black-900-color);
 }
 
 .resumeLabelMobile {
   font-size: 16px;
   font-weight: 600;
-  color: var(--black-900-color)
+  color: var(--black-900-color);
 }
 
 .resumeText {
@@ -588,5 +581,3 @@
   right: -1.5rem;
   transform: translateX(100%);
 }
-
-
