@@ -1,0 +1,15 @@
+.colorPrimary {
+  &:global(.ant-typography) {
+    color: var(--blue);
+  }
+}
+
+.link {
+  color: var(--main-primary-color);
+}
+
+.secondary {
+  &:global(.ant-typography) {
+    color: var(--text-light-secondary-color);
+  }
+}

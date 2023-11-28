@@ -7,12 +7,13 @@ import Space from 'antd/lib/space';
 import IconGithub from '@/components/Icon/Github';
 import IconGoogle from '@/components/Icon/Google';
 import IconLogoOnly from '@/components/Icon/LogoOnly';
+import { Typography } from '@/components/Typography';
 import classnames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import styles from './Login.module.scss';
-import { Button, Typography } from 'antd';
+import { Button } from 'antd';
 
 const LoginPage = () => {
   return (
@@ -47,7 +48,7 @@ const LoginPage = () => {
               level={2}
               className='m-0'
             >
-              Welcome to Zalow
+              Create your BlackBird Account
             </Typography.Title>
             <Typography
               color='var(--gray-600-color)'
