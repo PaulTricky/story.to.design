@@ -57,7 +57,7 @@ const PublicLayout = ({ children, slideShow = true, hideLogo = false }) => {
                 }
               >
                 <CarouselContent
-                  content={`Zalow made it simple and easy for me to get started freelancing..`}
+                  content={`I was glad the day I discovered BlackBird. As the name indicates, it makes the process of creating content for publication incredibly easy.`}
                   author={'Sally Freelancer'}
                   email={'@Sally'}
                 />
@@ -65,16 +65,6 @@ const PublicLayout = ({ children, slideShow = true, hideLogo = false }) => {
                   content={`I've now got access to the best security professionals whenever I need them.`}
                   author={'Joe Client'}
                   email={'@joe'}
-                />
-                <CarouselContent
-                  content={`Zalow allows me to leverage my existing experience while also exploring opportunities to expand my capabilities.`}
-                  author={'Bob Freelancer'}
-                  email={'@Bob'}
-                />
-                <CarouselContent
-                  content={`Zalow makes it easy for me to create projects and then matches the best freelancers available that meet my needs.`}
-                  author={'Kathy Client'}
-                  email={'@Kathy'}
                 />
               </Carousel>
             </div>
