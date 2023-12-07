@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './page.css';
 import LayoutPage from '../components/#2';
 import { ConfigProvider } from 'antd';
 import { theme } from '../../theme.config';
