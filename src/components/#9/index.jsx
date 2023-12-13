@@ -1,18 +1,19 @@
-import styles from "./styles.module.scss";
-import avatar from "../../../public/avatar/profile-avatar.png";
+import { Button, Dropdown, Space } from "antd/lib";
 import Image from "next/image";
-import { Button, Dropdown, Menu, Space } from "antd/lib";
-import SaveIcon from "../Icon/Save";
-import ChatIcon from "../Icon/Chat";
+import avatar from "../../../public/avatar/profile-avatar.png";
 import AddIcon from "../Icon/Add";
-import DropdownIcon from "../Icon/Dropdown";
-import VerticalDotIcon from "../Icon/VerticalDot";
+import ChatIcon from "../Icon/Chat";
+import SaveIcon from "../Icon/Save";
 import ShareIcon from "../Icon/Share";
-const ProfileHeader = () => {
+import VerticalDotIcon from "../Icon/VerticalDot";
+import styles from "./styles.module.scss";
+const ProfileHeader = ({ isMobile, isDesktop }) => {
   return (
     <div className={styles.card}>
       <div className={styles.upper}>
-        <Button  className={styles.share}><ShareIcon /> Share Profile</Button>
+        <Button className={styles.share}>
+          <ShareIcon /> Share Profile
+        </Button>
       </div>
       <div className={styles.main}>
         <Space size={32}>
@@ -33,14 +34,49 @@ const ProfileHeader = () => {
           </Space>
         </Space>
         <Space className={styles.actions}>
-          <div className={styles.button}>
-            <SaveIcon />
-          </div>
-          <div className={styles.button}>
-            <ChatIcon />
-          </div>
-          <Button type='default' shape="round" style={{border: '2px solid #AF0000', fontSize: 14, fontWeight: 600, color: '#AF0000'}}> <AddIcon /> Connect</Button>
-          <VerticalDotIcon  />
+          {isDesktop && (
+            <>
+              <div className={styles.button}>
+                <SaveIcon />
+              </div>
+              <div className={styles.button}>
+                <ChatIcon />
+              </div>
+              <Button
+                type="default"
+                shape="round"
+                style={{
+                  border: "2px solid #AF0000",
+                  fontSize: 14,
+                  fontWeight: 600,
+                  color: "#AF0000",
+                }}
+              >
+                {" "}
+                <AddIcon /> Connect
+              </Button>
+            </>
+          )}
+          <Dropdown placement="bottomLeft" arrow={{ pointAtCenter: true }} menu={{items: [
+            {
+              label: 'Save',
+              key: 'save'
+            },
+            {
+              label: 'Connect',
+              key: 'connect'
+            },
+            {
+              label: 'Chat',
+              key: 'chat'
+            },
+          ]}}>
+            <Button type='ghost'>
+            <VerticalDotIcon />
+            </Button>
+          
+          </Dropdown>
+          
         </Space>
       </div>
     </div>

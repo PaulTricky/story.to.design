@@ -2,14 +2,12 @@
   display: flex;
   flex-direction: column;
   border: 1px solid #cfcfcf;
-  border-radius: 24px;
   color: #344053;
-  overflow: hidden;
   font-family: Inter;
   font-style: normal;
   background: #4c394f;
   padding: 0 32px 48px 32px;
-  width: fit-content;
+  width: 100vw;
 }
 
 .tag {
@@ -36,7 +34,7 @@
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.2);
-  color: white
+  color: white;
 }
 
 .label {
@@ -85,7 +83,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-
+  position: relative;
   .contentTitle {
     color: #98a1b2;
     font-size: 14px;
@@ -106,4 +104,19 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
+}
+
+.footerDropdownMobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, -25%);
+  path {
+    fill: white
+  }
+}
+
+.defaultItemFooter {
+  overflow: hidden;
+  transition: 0.5s;
 }

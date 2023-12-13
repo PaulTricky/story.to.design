@@ -1,6 +1,6 @@
 import { Space } from "antd/lib";
 import Image from "next/image";
-import avatar from '../../../public/avatar/avatar.png';
+import avatar from "../../../public/avatar/avatar.png";
 import BellIcon from "../Icon/Bell";
 import GroupIcon from "../Icon/Groups";
 import InboxIcon from "../Icon/Inbox";
@@ -10,7 +10,8 @@ import ReportIcon from "../Icon/Report";
 import SettingIcon from "../Icon/Setting";
 import TalentIcon from "../Icon/Talent";
 import styles from "./styles.module.scss";
-
+import MenuIcon from '@mui/icons-material/Menu';
+import { useMemo } from "react";
 const Logo = () => {
   return (
     <Space>
@@ -29,102 +30,103 @@ const Logo = () => {
   );
 };
 
-const NavMenu = ({ items }) => {
-  return (
-    <div style={{ height: "100%", width: "100px", color: "red" }}>
-      {items.map((item) => {
-        <div>
-          {" "}
-          hi {item.icon} {item.label}{" "}
-        </div>;
-      })}
-    </div>
+const leftNav = [
+  {
+    icon: <TalentIcon />,
+    label: "Talent",
+  },
+  {
+    icon: <ProjectsIcon />,
+    label: "Projects",
+  },
+  {
+    icon: <InboxIcon />,
+    label: "Inbox",
+  },
+  {
+    icon: <ReportIcon />,
+    label: "Reports",
+  },
+];
+
+const rightNav = [
+  {
+    icon: <GroupIcon />,
+  },
+  {
+    icon: <BellIcon />,
+  },
+  {
+    icon: <SettingIcon />,
+  },
+];
+
+const mobileRightNav = [
+
+  {
+    icon: <BellIcon />,
+  },
+  {
+    icon: <MenuIcon />,
+  },
+];
+
+const NavbarComponent = ({ isMobile }) => {
+  const renderNavItem = (items) =>
+    items.map((el) => (
+      <Space className={styles.nav}>
+        {el.icon}
+        {el?.label}
+      </Space>
+    ));
+
+  const renderAvatar = () => (
+    <Space className={styles.nav}>
+      <div className={styles.avatar}>
+        <Image src={avatar} />
+      </div>
+    </Space>
   );
-};
 
-const NavbarComponent = () => {
-  const leftNav = [
-    {
-      icon: <TalentIcon />,
-      label: "Talent",
-    },
-    {
-      icon: <TalentIcon />,
-      label: "Projects",
-    },
-    {
-      icon: <TalentIcon />,
-      label: "Inbox",
-    },
-    {
-      icon: <TalentIcon />,
-      label: "Reports",
-    },
-  ];
+  const layout = useMemo(() => {
+    return !isMobile ? (
+      <>
+        {" "}
+        <Space>
+          <Logo />
+          <Space style={{ marginLeft: "17px" }}>{renderNavItem(leftNav)}</Space>
+        </Space>
+        <Space style={{ justifyContent: "flex-end" }}>
+          {renderNavItem(rightNav)}
+          {renderAvatar()}
+        </Space>
+      </>
+    ) : <>
+      {renderAvatar()}
+      <Logo />
+      <Space style={{ justifyContent: "flex-end" }}>
+          {renderNavItem(mobileRightNav)}
+        </Space>
+      </>;
+  }, [isMobile])
 
-  const rightNav = [
-    {
-      icon: <GroupIcon />,
-      label: "",
-    },
-    {
-      icon: <BellIcon />,
-      label: "",
-    },
-    {
-      icon: <SettingIcon />,
-      label: "",
-    },
-  ];
   return (
     <div
       style={{
+        position: 'fixed',
+        top: 0,
         padding: "16px 24px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         color: "black",
-        borderBottom: '1px solid #EAECF0'
+        borderBottom: "1px solid #EAECF0",
+        width: '100%',
+        background: 'white',
+        zIndex: 100
       }}
     >
-      <Space>
-        <Logo />
-
-        <Space style={{ marginLeft: "17px" }}>
-          <Space className={styles.nav}>
-            <TalentIcon />
-            Talent
-          </Space>
-          <Space className={styles.nav}>
-            <ProjectsIcon />
-            Projects
-          </Space>
-          <Space className={styles.nav}>
-            <InboxIcon />
-            Inbox
-          </Space>
-          <Space className={styles.nav}>
-            <ReportIcon />
-            Reports
-          </Space>
-        </Space>
-      </Space>
-      <Space style={{justifyContent: 'flex-end'}}>
-        <Space className={styles.nav}>
-          <GroupIcon />
-        </Space>
-        <Space className={styles.nav}>
-          <BellIcon />
-        </Space>
-        <Space className={styles.nav}>
-          <SettingIcon />
-        </Space>
-        <Space className={styles.nav}>
-          <div className={styles.avatar} >
-            <Image src={avatar} />
-          </div>
-        </Space>
-      </Space>
+      {layout}
     </div>
   );
 };
